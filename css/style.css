@@ -1,8 +1,11 @@
+
+ /* specify logo animation length and name */ 
 #logo {
     animation-duration: 5s;
     animation-name: logoAnimate
   }
 
+   /* animate the logo from 0 to 100% */ 
   @keyframes logoAnimate {
     0% {
         width: 25px;
@@ -16,6 +19,7 @@
     }
   }
 
+   /* add flex to header in column format */ 
   header {
     display: flex;
     align-items: center;
@@ -23,21 +27,24 @@
     flex-direction: column;
   }
 
+   /* add flex to navigation in column format */ 
   .nav_links {
     display: flex;
     flex-direction: column;
   }
-
+ /* add google font and background image and color to body */ 
   body {
     font-family: 'Poppins', serif;
     background-image: url(../images/concrete_seamless.png);
     background-color: #f1f1f1;
   }
 
+ /* style the navigation links so they have the same color after being visited */ 
   .nav_item a:visited {
     color: blue;
   }
 
+   /* add styling to header elements that are children of the card class */ 
   .card > header {
     background-color: #288088;
     border-style: solid;
@@ -48,11 +55,13 @@
     border-radius: 50px 50px 0px 0px;
   }
 
+   /* specify minimum size of 450 to card class and add border radius*/ 
   .card {
     flex-basis: 450px;
     border-radius: 50px 50px 0px 0px;
   }
 
+   /* add flex to pricing class in column format with wrap */ 
   .pricing {
     display: flex;
     flex-direction: column;
@@ -61,6 +70,7 @@
     align-items: center;
   }
 
+   /* add styling to gallery images */ 
   .gallery img{
     border: 10px solid #50C7C7;
     margin: 10px;
@@ -68,6 +78,7 @@
     height: auto;
   }
 
+   /* add flex to gallery class in row format with wrap*/ 
   .gallery {
     display: flex;
     justify-content: center;
@@ -75,64 +86,76 @@
     flex-wrap: wrap;
   }
 
-
+ /* edit styling for screens greater than 900px */ 
   @media screen and (min-width: 900px) {
+
+     /* change header flex to row format with spaced out alignment */ 
     header {
       flex-direction: row;
       justify-content: space-between;
 
     }
 
-
+    /* change nav link flex format to row */ 
     .nav_links {
       flex-direction: row;
     }
 
+     /* specify new minimum size for card */ 
     .card {
       flex-basis: 275px;
     }
 
+     /* change pricing flex format to row without wrapping */ 
     .pricing {
       flex-direction: row;
       flex-wrap: nowrap;
     }
 
+     /* make the first header of the body stay at the top of the screen during scroll */ 
     body > header:first-of-type {
       position: sticky;
       top: 0;
     }
 
+     /* change spacing of gallery items */ 
     .gallery {
       justify-content: space-around;
     }
 
   }
 
+   /* eliminate animation for reduced motion users */ 
   @media screen and (prefers-reduced-motion: reduce) {
     #logo {
       animation: none;
     }
 
+     /* change layout for print portrait mode */ 
   @media print and (orientation: portrait) {
     body {
       font-family: Arial, Helvetica;
       background-image: none;
     }
 
+     /* remove the visibility of gallery id and class */ 
     .gallery, #gallery {
       display: none;
     }
 
+     /* change the card border and minimum size */ 
     .card {
       border: 2px solid #45ADDD;
       flex-basis: 325px;
     }
 
+     /* change nav link flex format to row and change spacing to be spread out */ 
     .nav_links {
       flex-direction: row;
       justify-content: space-between;
     }
 
+     /* change pricing flex to row format without wrap and align items at the bottom*/ 
     .pricing {
       position: relative;
       flex-direction: row;
@@ -141,6 +164,7 @@
       bottom: 0;
     }
 
+     /* add a thumbs up emoji to the second list item that is a child of the card class */ 
     .card > li:nth-child(2) {
       list-style-type: "\U+1F44D"; 
     }
