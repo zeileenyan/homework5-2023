@@ -44,12 +44,12 @@
     border-width: 2px;
     border-color: #45ADAD;
     padding-top: 20px;
-    padding-bottom: 20 px;
+    padding-bottom: 20px;
     border-radius: 50px 50px 0px 0px;
   }
 
   .card {
-    flex-basis: 450 px;
+    flex-basis: 450px;
     border-radius: 50px 50px 0px 0px;
   }
 
@@ -89,7 +89,7 @@
     }
 
     .card {
-      flex-basis: 275 px;
+      flex-basis: 275px;
     }
 
     .pricing {
