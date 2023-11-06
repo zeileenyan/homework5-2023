@@ -1,0 +1,148 @@
+#logo {
+    animation-duration: 5s;
+    animation-name: logoAnimate
+  }
+  
+  @keyframes logoAnimate {
+    0% {
+        width: 25px;
+        height: auto;
+        opacity: 0;
+    }
+    100% {
+        width: 475px;
+        height: auto;
+        opacity: 1;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    font-family: 'Poppins', serif;
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+  }
+
+  .nav_item a:visited {
+    color: blue;
+  }
+
+  .card > header {
+    background-color: #288088;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .card {
+    flex-basis: 450px;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+    height: auto;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  @media screen and (min-width: 900px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+
+    .nav_links {
+      flex-direction: row;
+    }
+
+    .card {
+      flex-basis: 275px;
+    }
+
+    .pricing {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    body > header:first-of-type {
+      position: sticky;
+      top: 0;
+    }
+
+    .gallery {
+      justify-content: space-around;
+    }
+
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) { 
+    #logo {
+      animation: none;
+    }
+
+  @media print and (orientation: portrait) {
+    body {
+      font-family: Arial, Helvetica;
+      background-image: none;
+    }
+
+    .gallery, #gallery {
+      display: none;
+    }
+
+    .card {
+      border: 2px solid #45ADDD;
+      flex-basis: 325px;
+    }
+
+    .nav_links {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .pricing {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      position: absolute;
+      bottom: 0;
+    }
+
+  }
+  }
+
+  /* problems: 
+  - print not updating
